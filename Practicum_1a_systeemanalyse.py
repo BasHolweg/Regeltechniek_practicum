@@ -5,7 +5,7 @@ import control
 
 def print_data(t, y, name):
     c = round(y[len(t) - 1])
-    d = round(max(y) - 1)
+    d = round(max(y) - c)
     tp = round(t[next(len(y) - i for i in range(2, len(y) - 1) if y[-i] == y.max())] - t[0], 2)
     est = round(1 - c)
     ts = round(t[next(len(y) - i for i in range(2, len(y) - 1) if abs(y[-i] / y[-1]) < 0.95)] - t[0], 2)

@@ -19,7 +19,7 @@ for i in range(len(w)):
 
 X = [x.real for x in Hw_list]
 Y = [y.imag for y in Hw_list]
-plt.scatter(X,Y, color='purple')
+plt.scatter(X, Y, color='purple')
 control.nyquist_plot(H)
 
 plt.show()

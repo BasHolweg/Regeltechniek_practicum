@@ -11,11 +11,15 @@ H = control.tf(teller, noemer)
 H1 = sig.lti(teller, noemer)
 
 t = np.arange(0, 10, 0.01)
-u = np.sin(5.*t)
+u = np.sin(5. * t)
 
 tout, y, x = sig.lsim(H1, u, t)
 # y, T, xout = cm.lsim(H, u, t)
 
 plt.plot(t, y)
 plt.plot(t, u)
+plt.xlim(0, 2 * 3.14 / 5)
+for i in range(8):
+    plt.axvline(x=(2 * 3.14 / (5 * 8)) * i, color='gray', linestyle='--')
+plt.grid()
 plt.show()
