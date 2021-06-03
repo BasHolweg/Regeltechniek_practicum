@@ -11,3 +11,4 @@ for i in range(len(d)):
     H = control.tf(teller, noemer)
     control.bode(H)
     plt.show()
+
